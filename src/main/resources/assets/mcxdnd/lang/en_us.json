@@ -1,0 +1,18 @@
+{
+  "item.mcxdnd.d20": "D20",
+  "item.mcxdnd.d12": "D12",
+  "item.mcxdnd.d10": "D10",
+  "item.mcxdnd.d8": "D8",
+  "item.mcxdnd.d6": "D6",
+  "item.mcxdnd.d4": "D4",
+  "item.mcxdnd.d20_advantage": "D20 Advantage",
+  "item.mcxdnd.d20_disadvantage": "D20 Disadvantage",
+
+  "item.mcxdnd.dagger": "Dagger",
+
+  "item.mcxdnd.spellbook": "Spellbook",
+
+  "creativetab.mcxdnd.dice_tab": "Dice",
+  "creativetab.mcxdnd.dnd_weapons_tab": "DND Weapons",
+  "creativetab.mcxdnd.spells_tab": "Spells"
+}
