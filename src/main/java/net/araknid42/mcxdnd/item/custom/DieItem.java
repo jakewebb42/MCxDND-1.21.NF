@@ -4,6 +4,7 @@ import net.araknid42.mcxdnd.item.ModItems;
 
 //import net.araknid42.mcxdnd.sound.ModSounds;
 
+import net.araknid42.mcxdnd.sound.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -30,8 +31,8 @@ public class DieItem extends BowItem {
     public static int NUM_SIDES;
     public static int MODIFIER = 0;
     public static SoundEvent END_SOUND = SoundEvents.DRAGON_FIREBALL_EXPLODE;
-    //public static SoundEvent ROLL_SOUND = ModSounds.DICE_ROLL.get();
-    public static SoundEvent ROLL_SOUND = SoundEvents.EXPERIENCE_ORB_PICKUP;
+    public static SoundEvent ROLL_SOUND = ModSounds.DICE_ROLL.get();
+    //public static SoundEvent ROLL_SOUND = SoundEvents.EXPERIENCE_ORB_PICKUP;
     public static int TICK_COUNTER = 1;
 
     /* Custom Functions */

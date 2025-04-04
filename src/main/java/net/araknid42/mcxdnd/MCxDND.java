@@ -2,6 +2,7 @@ package net.araknid42.mcxdnd;
 
 import net.araknid42.mcxdnd.item.ModCreativeModeTabs;
 import net.araknid42.mcxdnd.item.ModItems;
+import net.araknid42.mcxdnd.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -44,6 +45,7 @@ public class MCxDND
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

@@ -1,0 +1,8 @@
+{
+  "dice_roll": {
+    "subtitle": "sounds.mcxdnd.dice_roll",
+    "sounds": [
+      "mcxdnd:dice_roll"
+    ]
+  }
+}
