@@ -1,9 +1,15 @@
 package net.araknid42.mcxdnd;
 
+import net.araknid42.mcxdnd.client.DndHudOverlay;
 import net.araknid42.mcxdnd.item.ModCreativeModeTabs;
 import net.araknid42.mcxdnd.item.ModItems;
 import net.araknid42.mcxdnd.sound.ModSounds;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.DeltaTracker;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -47,6 +53,7 @@ public class MCxDND
         ModItems.register(modEventBus);
         ModSounds.register(modEventBus);
 
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -76,8 +83,13 @@ public class MCxDND
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
+
         {
 
+        }
+        @SubscribeEvent
+        private static void registerGuiLayersEvent(RegisterGuiLayersEvent event) {
+            event.registerAboveAll(DndHudOverlay.DND_HUD_OVERLAY, new DndHudOverlay());
         }
     }
 }

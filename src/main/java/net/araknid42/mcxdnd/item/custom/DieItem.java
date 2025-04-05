@@ -2,8 +2,6 @@ package net.araknid42.mcxdnd.item.custom;
 
 import net.araknid42.mcxdnd.item.ModItems;
 
-//import net.araknid42.mcxdnd.sound.ModSounds;
-
 import net.araknid42.mcxdnd.sound.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -20,7 +18,6 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
 public class DieItem extends BowItem {
-
 
     // Constructor
     public DieItem(Properties pProperties) {
