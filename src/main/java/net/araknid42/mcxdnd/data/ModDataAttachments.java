@@ -18,6 +18,21 @@ public class ModDataAttachments {
     public static final Supplier<AttachmentType<Integer>> STRENGTH_SCORE = ATTACHMENT_TYPES.register(
             "strength_score", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build()
     );
+    public static final Supplier<AttachmentType<Integer>> DEXTERITY_SCORE = ATTACHMENT_TYPES.register(
+            "dexterity_score", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build()
+    );
+    public static final Supplier<AttachmentType<Integer>> CONSTITUTION_SCORE = ATTACHMENT_TYPES.register(
+            "constitution_score", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build()
+    );
+    public static final Supplier<AttachmentType<Integer>> INTELLIGENCE_SCORE = ATTACHMENT_TYPES.register(
+            "intelligence_score", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build()
+    );
+    public static final Supplier<AttachmentType<Integer>> WISDOM_SCORE = ATTACHMENT_TYPES.register(
+            "wisdom_score", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build()
+    );
+    public static final Supplier<AttachmentType<Integer>> CHARISMA_SCORE = ATTACHMENT_TYPES.register(
+            "charisma_score", () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).build()
+    );
 
     public static void register(IEventBus eventBus) {
         ATTACHMENT_TYPES.register(eventBus);

@@ -17,7 +17,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
-import static net.araknid42.mcxdnd.data.ModDataAttachments.STRENGTH_SCORE;
+import static net.araknid42.mcxdnd.data.ModDataAttachments.*;
 
 public class DieItem extends BowItem {
 
@@ -160,7 +160,12 @@ public class DieItem extends BowItem {
 
                 // Output Sound
                 pLevel.playSound(null, playerPos, DieItem.END_SOUND, SoundSource.PLAYERS);
-                minecraft.player.setData(STRENGTH_SCORE, minecraft.player.getData(STRENGTH_SCORE) + 10);
+                minecraft.player.setData(STRENGTH_SCORE, minecraft.player.getData(STRENGTH_SCORE) + 1);
+                minecraft.player.setData(DEXTERITY_SCORE, minecraft.player.getData(DEXTERITY_SCORE) + 2);
+                minecraft.player.setData(CONSTITUTION_SCORE, minecraft.player.getData(CONSTITUTION_SCORE) + 3);
+                minecraft.player.setData(INTELLIGENCE_SCORE, minecraft.player.getData(INTELLIGENCE_SCORE) + 4);
+                minecraft.player.setData(WISDOM_SCORE, minecraft.player.getData(WISDOM_SCORE) + 5);
+                minecraft.player.setData(CHARISMA_SCORE, minecraft.player.getData(CHARISMA_SCORE) + 6);
 
 
             }
