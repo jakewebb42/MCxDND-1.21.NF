@@ -15,5 +15,7 @@
 
   "creativetab.mcxdnd.dice_tab": "Dice",
   "creativetab.mcxdnd.dnd_weapons_tab": "DND Weapons",
-  "creativetab.mcxdnd.spells_tab": "Spells"
+  "creativetab.mcxdnd.spells_tab": "Spells",
+
+  "hud.mcxdnd.dnd_hud": "DND Hud"
 }

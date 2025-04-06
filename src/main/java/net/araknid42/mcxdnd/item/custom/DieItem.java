@@ -17,6 +17,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
+import static net.araknid42.mcxdnd.data.ModDataAttachments.STRENGTH_SCORE;
+
 public class DieItem extends BowItem {
 
     // Constructor
@@ -158,6 +160,9 @@ public class DieItem extends BowItem {
 
                 // Output Sound
                 pLevel.playSound(null, playerPos, DieItem.END_SOUND, SoundSource.PLAYERS);
+                minecraft.player.setData(STRENGTH_SCORE, minecraft.player.getData(STRENGTH_SCORE) + 10);
+
+
             }
         }
     }

@@ -1,14 +1,17 @@
 package net.araknid42.mcxdnd;
 
 import net.araknid42.mcxdnd.client.DndHudOverlay;
+import net.araknid42.mcxdnd.data.ModDataAttachments;
 import net.araknid42.mcxdnd.item.ModCreativeModeTabs;
 import net.araknid42.mcxdnd.item.ModItems;
 import net.araknid42.mcxdnd.sound.ModSounds;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import org.slf4j.Logger;
 
@@ -26,6 +29,8 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
+import static net.araknid42.mcxdnd.data.ModDataAttachments.STRENGTH_SCORE;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MCxDND.MOD_ID)
@@ -52,6 +57,9 @@ public class MCxDND
 
         ModItems.register(modEventBus);
         ModSounds.register(modEventBus);
+
+        // In your mod constructor, don't forget to register the DeferredRegister to your mod bus:
+        ModDataAttachments.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -89,7 +97,7 @@ public class MCxDND
         }
         @SubscribeEvent
         private static void registerGuiLayersEvent(RegisterGuiLayersEvent event) {
-            event.registerAboveAll(DndHudOverlay.DND_HUD_OVERLAY, new DndHudOverlay());
+            event.registerAboveAll(ResourceLocation.fromNamespaceAndPath(MCxDND.MOD_ID, "dnd_hud"), new DndHudOverlay());
         }
     }
 }
