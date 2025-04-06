@@ -13,9 +13,12 @@
 
   "item.mcxdnd.spellbook": "Spellbook",
 
+  "item.mcxdnd.strength_attribute": "Strength Attribute",
+
   "creativetab.mcxdnd.dice_tab": "Dice",
   "creativetab.mcxdnd.dnd_weapons_tab": "DND Weapons",
   "creativetab.mcxdnd.spells_tab": "Spells",
+  "creativetab.mcxdnd.character_sheet_tab": "Character Sheet",
 
   "hud.mcxdnd.dnd_hud": "DND Hud"
 }

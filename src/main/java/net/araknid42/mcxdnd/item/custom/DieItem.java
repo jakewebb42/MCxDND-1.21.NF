@@ -160,7 +160,6 @@ public class DieItem extends BowItem {
 
                 // Output Sound
                 pLevel.playSound(null, playerPos, DieItem.END_SOUND, SoundSource.PLAYERS);
-                minecraft.player.setData(STRENGTH_SCORE, minecraft.player.getData(STRENGTH_SCORE) + 1);
                 minecraft.player.setData(DEXTERITY_SCORE, minecraft.player.getData(DEXTERITY_SCORE) + 2);
                 minecraft.player.setData(CONSTITUTION_SCORE, minecraft.player.getData(CONSTITUTION_SCORE) + 3);
                 minecraft.player.setData(INTELLIGENCE_SCORE, minecraft.player.getData(INTELLIGENCE_SCORE) + 4);

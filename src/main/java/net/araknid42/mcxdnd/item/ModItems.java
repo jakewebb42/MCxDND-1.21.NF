@@ -2,6 +2,7 @@ package net.araknid42.mcxdnd.item;
 
 import net.araknid42.mcxdnd.MCxDND;
 import net.araknid42.mcxdnd.item.custom.AdvantageDieItem;
+import net.araknid42.mcxdnd.item.custom.CharacterSheetItem;
 import net.araknid42.mcxdnd.item.custom.DieItem;
 import net.araknid42.mcxdnd.item.custom.DisadvantageDieItem;
 import net.minecraft.world.item.Item;
@@ -32,7 +33,6 @@ public class ModItems {
     public static final DeferredItem<Item> D20_DISADVANTAGE = ITEMS.register("d20_disadvantage",
             () -> new DisadvantageDieItem(new Item.Properties().durability(1).rarity(Rarity.UNCOMMON)));
 
-
     // Register Weapon Items
     public static final DeferredItem<Item> DAGGER = ITEMS.register("dagger",
             () -> new DieItem(new Item.Properties()));
@@ -40,6 +40,10 @@ public class ModItems {
     // Register Spell Items
     public static final DeferredItem<Item> SPELLBOOK = ITEMS.register("spellbook",
             () -> new Item(new Item.Properties()));
+
+    // Register Character Sheet Items
+    public static final DeferredItem<Item> STRENGTH_ATTRIBUTE = ITEMS.register("strength_attribute",
+            () -> new CharacterSheetItem(new Item.Properties().durability(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

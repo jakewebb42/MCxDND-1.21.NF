@@ -55,6 +55,17 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    public static final Supplier<CreativeModeTab>  CHARACTER_SHEET_TAB = CREATIVE_MODE_TAB.register("character_sheet_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STRENGTH_ATTRIBUTE.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(MCxDND.MOD_ID, "spells_tab"))
+                    .title(Component.translatable("creativetab.mcxdnd.character_sheet_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModItems.STRENGTH_ATTRIBUTE);
+
+                    })
+                    .build());
+
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }
